@@ -9501,26 +9501,7 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/config/OriginalTiddlerPaths]]
-# [[$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/import]]
-# [[$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions]]
-# [[$:/DefaultTiddlers]]
-# [[$:/isEncrypted]]
-# [[$:/plugins/bourgeoa/nodesolidserver]]
-# [[$:/plugins/bourgeoa/nodesolidserver/config]]
-# [[$:/plugins/bourgeoa/nodesolidserver/config - wip]]
-# [[$:/plugins/bourgeoa/nodesolidserver/namespace]]
-# [[$:/plugins/bourgeoa/nodesolidserver/private]]
-# [[$:/SiteSubtitle]]
-# [[$:/SiteTitle]]
-# [[$:/status/IsLoggedIn]]
-# [[$:/status/UserName]]
-# [[$:/themes/tiddlywiki/centralised]]
-# [[$:/themes/tiddlywiki/heavier]]
-# [[$:/themes/tiddlywiki/seamless]]
-# [[$:/themes/tiddlywiki/starlight]]
-# [[$:/themes/tiddlywiki/tight]]
-# [[config]]</pre>
+# [[GitHub-Links]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9585,10 +9566,10 @@ The actual path in your solid server will be:
 --------------&quot;And reload your browser&quot;--------------
 </pre>
 </div>
-<div created="20191022073515257" creator="VikingMage" modified="20191024105649279" modifier="VikingMage" title="$:/plugins/bourgeoa/nodesolidserver/namespace">
+<div created="20191022073515257" creator="VikingMage" modified="20191024111315516" modifier="VikingMage" title="$:/plugins/bourgeoa/nodesolidserver/namespace">
 <pre>AnotherWiki</pre>
 </div>
-<div created="20191022081254303" creator="VikingMage" modified="20191024105651056" modifier="VikingMage" title="$:/plugins/bourgeoa/nodesolidserver/private">
+<div created="20191022081254303" creator="VikingMage" modified="20191024111317494" modifier="VikingMage" title="$:/plugins/bourgeoa/nodesolidserver/private">
 <pre>no</pre>
 </div>
 <div created="20191022081915011" modified="20191022081915012" title="$:/SiteSubtitle">
@@ -9609,8 +9590,8 @@ The actual path in your solid server will be:
 <div created="20191022100040239" modified="20191022165526797" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
-<div created="20191022100045246" modified="20191022165530054" title="$:/state/tab-2065006209">
-<pre>$:/core/ui/ControlPanel/Saving/General</pre>
+<div created="20191022100045246" modified="20191024111334424" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
 <div created="20191022125559695" modified="20191024052357454" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
@@ -9627,7 +9608,7 @@ The actual path in your solid server will be:
 <div title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20191024110357727" list="config $:/AdvancedSearch $:/core/ui/ControlPanel/Saving/GitHub WikiSwitcher index.html-matrix [[GitHub-Links v2]] [[Test - $tiddler]] [[Test - $transclude]] [[Test - $view widget]] GitHub-Links" modified="20191024110357727" title="$:/StoryList">
+<div created="20191024111329977" list="$:/Import $:/ControlPanel config $:/AdvancedSearch $:/core/ui/ControlPanel/Saving/GitHub WikiSwitcher index.html-matrix [[GitHub-Links v2]] [[Test - $tiddler]] [[Test - $transclude]] [[Test - $view widget]] GitHub-Links" modified="20191024111329977" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191022100815533" modified="20191024054018919" title="$:/temp/advancedsearch">
@@ -9646,7 +9627,7 @@ The actual path in your solid server will be:
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;https://vikingmage.github.io/test/solid.comunity/&quot;
+            &quot;text&quot;: &quot;https://vikingmage.github.io/test/solid.comunity/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9666,7 +9647,7 @@ The actual path in your solid server will be:
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/test/solid.comunity/&quot;
+            &quot;text&quot;: &quot;/test/solid.comunity/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9885,13 +9866,19 @@ The actual path in your solid server will be:
 {{$:/plugins/bourgeoa/nodesolidserver/config - wip}}
 </pre>
 </div>
-<div created="20191022100835087" modified="20191024111036023" tags="" title="GitHub-Links">
-<pre>\define gcom()
+<div created="20191022100835087" creator="VikingMage" modified="20191024113405774" modifier="VikingMage" tags="" title="GitHub-Links">
+<pre>\define gh-blob()
+&lt;$text text=&quot;[[&quot;/&gt;/blob/{{$:/GitHub/Branch}}{{$:/GitHub/Path}}{{$:/GitHub/Filename}}|https://GitHub.com/{{$:/GitHub/Repo}}/blob/{{$:/GitHub/Branch}}{{$:/GitHub/Path}}{{$:/GitHub/Filename}}&lt;$text text=&quot;]]&quot;/&gt;
+\end
+
+\define gh-tree()
+&lt;$text text=&quot;[[&quot;/&gt;/tree/{{$:/GitHub/Branch}}{{$:/GitHub/Path}}{{$:/GitHub/Filename}}|https://GitHub.com/{{$:/GitHub/Repo}}/tree/{{$:/GitHub/Branch}}{{$:/GitHub/Path}}{{$:/GitHub/Filename}}&lt;$text text=&quot;]]&quot;/&gt;
+\end
+
+\define gcom()
 https://GitHub.com/{{$:/GitHub/Repo}}/tree/{{$:/GitHub/Branch}}{{$:/GitHub/Path}}{{$:/GitHub/Filename}}
 \end
-\define ghBlob()
-https://GitHub.com/{{$:/GitHub/Repo}}/blob/{{$:/GitHub/Branch}}{{$:/GitHub/Path}}{{$:/GitHub/Filename}}
-\end
+
 
 \define LinkGitHubBlob(link)
 &lt;$wikify name=&quot;y&quot; text=&quot;&quot;&quot;$(ghBlob)$&quot;&quot;&quot; &gt;
@@ -9909,10 +9896,21 @@ https://GitHub.com/{{$:/GitHub/Repo}}/blob/{{$:/GitHub/Branch}}{{$:/GitHub/Path}
 https://{{$:/GitHub/Username}}.GitHub.io&lt;$list filter=&quot; $:/GitHub/Path $:/GitHub/Filename&quot; &gt;&lt;$text text={{!!text}}/&gt;&lt;/$list&gt;
 \end
 
+
+
+
+
+
+
+
+
+
+
+
 |!links |&lt;|
 |~GitHub.io|&lt;$wikify name=&quot;y&quot; text=&lt;&lt;X&gt;&gt; &gt;&lt;&lt;y&gt;&gt; &lt;/$wikify&gt; |
-|~GitHub.com/tree|&lt;&lt;LinkGitHub.com&gt;&gt; |
-|~GitHub.com/blob|&lt;&lt;LinkGitHubBlob&gt;&gt; |</pre>
+|~GitHub.com/tree|&lt;$wikify name=&quot;y&quot; text=&lt;&lt;gh-tree&gt;&gt; &gt;&lt;&lt;y&gt;&gt;&lt;/$wikify&gt; |
+|~GitHub.com/blob|&lt;$wikify name=&quot;y&quot; text=&lt;&lt;gh-blob&gt;&gt; &gt;&lt;&lt;y&gt;&gt;&lt;/$wikify&gt; |</pre>
 </div>
 <div created="20191022121013799" index-names="ind" modified="20191022131718799" tags="" title="GitHub-Links v2" type="text/vnd.tiddlywiki">
 <pre>\define gcom()
