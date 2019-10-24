@@ -155,6 +155,8 @@ Error message and password prompt
 
 <li>$:/DefaultTiddlers</li>
 
+<li>$:/GitHub/Branch</li>
+
 <li>$:/GitHub/Filename</li>
 
 <li>$:/GitHub/Path</li>
@@ -184,6 +186,8 @@ Error message and password prompt
 <li>$:/SiteTitle</li>
 
 <li>$:/state/showeditpreview</li>
+
+<li>$:/state/sidebar</li>
 
 <li>$:/state/tab--1498284803</li>
 
@@ -9476,6 +9480,9 @@ Error message and password prompt
 [list[$:/StoryList]]
 </pre>
 </div>
+<div created="20191024110405841" modified="20191024110406967" title="$:/GitHub/Branch">
+<pre>master</pre>
+</div>
 <div created="20191022100605499" modified="20191022100616630" title="$:/GitHub/Filename">
 <pre>index.html</pre>
 </div>
@@ -9578,10 +9585,10 @@ The actual path in your solid server will be:
 --------------&quot;And reload your browser&quot;--------------
 </pre>
 </div>
-<div created="20191022073515257" creator="VikingMage" modified="20191024051955911" modifier="VikingMage" title="$:/plugins/bourgeoa/nodesolidserver/namespace">
+<div created="20191022073515257" creator="VikingMage" modified="20191024105649279" modifier="VikingMage" title="$:/plugins/bourgeoa/nodesolidserver/namespace">
 <pre>AnotherWiki</pre>
 </div>
-<div created="20191022081254303" creator="VikingMage" modified="20191024051957340" modifier="VikingMage" title="$:/plugins/bourgeoa/nodesolidserver/private">
+<div created="20191022081254303" creator="VikingMage" modified="20191024105651056" modifier="VikingMage" title="$:/plugins/bourgeoa/nodesolidserver/private">
 <pre>no</pre>
 </div>
 <div created="20191022081915011" modified="20191022081915012" title="$:/SiteSubtitle">
@@ -9591,6 +9598,9 @@ The actual path in your solid server will be:
 <pre>tw-NSS wiki</pre>
 </div>
 <div created="20191022101537301" modified="20191022165606491" title="$:/state/showeditpreview">
+<pre>yes</pre>
+</div>
+<div created="20191024110115040" modified="20191024111048542" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20191022115757558" modified="20191024052923910" title="$:/state/tab--1498284803">
@@ -9609,7 +9619,7 @@ The actual path in your solid server will be:
 <pre>no</pre>
 </div>
 <div title="$:/status/IsLoggedIn">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
 <div title="$:/status/IsReadOnly">
 <pre>no</pre>
@@ -9617,7 +9627,7 @@ The actual path in your solid server will be:
 <div title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20191024052014745" list="$:/AdvancedSearch WikiSwitcher index.html-matrix [[GitHub-Links v2]] [[Test - $tiddler]] [[Test - $transclude]] [[Test - $view widget]] GitHub-Links" modified="20191024054049909" title="$:/StoryList">
+<div created="20191024110357727" list="config $:/AdvancedSearch $:/core/ui/ControlPanel/Saving/GitHub WikiSwitcher index.html-matrix [[GitHub-Links v2]] [[Test - $tiddler]] [[Test - $transclude]] [[Test - $view widget]] GitHub-Links" modified="20191024110357727" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191022100815533" modified="20191024054018919" title="$:/temp/advancedsearch">
@@ -9636,7 +9646,7 @@ The actual path in your solid server will be:
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;https://vikingmage.github.io/test/solid.comunity/index.html&quot;
+            &quot;text&quot;: &quot;https://vikingmage.github.io/test/solid.comunity/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9656,7 +9666,7 @@ The actual path in your solid server will be:
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/test/solid.comunity/index.html&quot;
+            &quot;text&quot;: &quot;/test/solid.comunity/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9668,11 +9678,11 @@ The actual path in your solid server will be:
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;360&quot;
+            &quot;text&quot;: &quot;1500&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;640&quot;
+            &quot;text&quot;: &quot;844&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -9875,11 +9885,19 @@ The actual path in your solid server will be:
 {{$:/plugins/bourgeoa/nodesolidserver/config - wip}}
 </pre>
 </div>
-<div created="20191022100835087" modified="20191022115335209" tags="" title="GitHub-Links">
+<div created="20191022100835087" modified="20191024111036023" tags="" title="GitHub-Links">
 <pre>\define gcom()
-https://GitHub.com/{{$:/GitHub/Repo}}{{$:/GitHub/Path}}{{$:/GitHub/Filename}}
+https://GitHub.com/{{$:/GitHub/Repo}}/tree/{{$:/GitHub/Branch}}{{$:/GitHub/Path}}{{$:/GitHub/Filename}}
+\end
+\define ghBlob()
+https://GitHub.com/{{$:/GitHub/Repo}}/blob/{{$:/GitHub/Branch}}{{$:/GitHub/Path}}{{$:/GitHub/Filename}}
 \end
 
+\define LinkGitHubBlob(link)
+&lt;$wikify name=&quot;y&quot; text=&quot;&quot;&quot;$(ghBlob)$&quot;&quot;&quot; &gt;
+&lt;&lt;y&gt;&gt;
+&lt;/$wikify&gt;
+\end
 \define LinkGitHub.com(link)
 &lt;$wikify name=&quot;y&quot; text=&quot;&quot;&quot;$(gcom)$&quot;&quot;&quot; &gt;
 &lt;&lt;y&gt;&gt;
@@ -9893,7 +9911,8 @@ https://{{$:/GitHub/Username}}.GitHub.io&lt;$list filter=&quot; $:/GitHub/Path $
 
 |!links |&lt;|
 |~GitHub.io|&lt;$wikify name=&quot;y&quot; text=&lt;&lt;X&gt;&gt; &gt;&lt;&lt;y&gt;&gt; &lt;/$wikify&gt; |
-|~GitHub.com|&lt;&lt;LinkGitHub.com&gt;&gt; |</pre>
+|~GitHub.com/tree|&lt;&lt;LinkGitHub.com&gt;&gt; |
+|~GitHub.com/blob|&lt;&lt;LinkGitHubBlob&gt;&gt; |</pre>
 </div>
 <div created="20191022121013799" index-names="ind" modified="20191022131718799" tags="" title="GitHub-Links v2" type="text/vnd.tiddlywiki">
 <pre>\define gcom()
