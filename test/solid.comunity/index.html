@@ -223,8 +223,6 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
-<li>AnotherWiki</li>
-
 <li>config</li>
 
 <li>GitHub-Links</li>
@@ -238,6 +236,8 @@ Error message and password prompt
 <li>Test - $transclude</li>
 
 <li>Test - $view widget</li>
+
+<li>WikiSwitcher</li>
 
 </ul>
 </p>
@@ -9471,8 +9471,8 @@ Error message and password prompt
 
 {{GitHub-Links}}</pre>
 </div>
-<div created="20191022073551648" creator="VikingMage" modified="20191022082701930" modifier="VikingMage" title="$:/DefaultTiddlers">
-<pre>config 
+<div created="20191022073551648" creator="VikingMage" modified="20191024054251209" modifier="VikingMage" title="$:/DefaultTiddlers">
+<pre>config WikiSwitcher 
 [list[$:/StoryList]]
 </pre>
 </div>
@@ -9593,8 +9593,8 @@ The actual path in your solid server will be:
 <div created="20191022101537301" modified="20191022165606491" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20191022115757558" modified="20191022125809356" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+<div created="20191022115757558" modified="20191024052923910" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
 <div created="20191022100040239" modified="20191022165526797" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
@@ -9602,8 +9602,8 @@ The actual path in your solid server will be:
 <div created="20191022100045246" modified="20191022165530054" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
-<div created="20191022125559695" modified="20191022125559695" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20191022125559695" modified="20191024052357454" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div title="$:/status/IsAnonymous">
 <pre>no</pre>
@@ -9617,11 +9617,11 @@ The actual path in your solid server will be:
 <div title="$:/status/UserName">
 <pre></pre>
 </div>
-<div created="20191024052014745" list="config AnotherWiki index.html-matrix [[GitHub-Links v2]] [[Test - $tiddler]] [[Test - $transclude]] [[Test - $view widget]] GitHub-Links" modified="20191024052237777" title="$:/StoryList">
+<div created="20191024052014745" list="$:/AdvancedSearch WikiSwitcher index.html-matrix [[GitHub-Links v2]] [[Test - $tiddler]] [[Test - $transclude]] [[Test - $view widget]] GitHub-Links" modified="20191024054049909" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20191022100815533" modified="20191022125821846" title="$:/temp/advancedsearch">
-<pre>GitHub-Links </pre>
+<div created="20191022100815533" modified="20191024054018919" title="$:/temp/advancedsearch">
+<pre>[has[modified]!sort[modified]limit[50]] -[prefix[$:/temp]] -[prefix[$:/state]] </pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -9865,10 +9865,6 @@ The actual path in your solid server will be:
     }
 }</pre>
 </div>
-<div created="20191024052251059" modified="20191024052323216" title="AnotherWiki">
-<pre>Public
-AnotherWiki</pre>
-</div>
 <div created="20191022074728795" creator="VikingMage" modified="20191022075136813" modifier="VikingMage" tags="" title="config">
 <pre>&lt;small&gt;
 
@@ -9972,6 +9968,9 @@ $:/core/ui/EditTemplate/body/preview/output}}
 <div created="20191022121450828" modified="20191022125547684" tags="" title="Test - $view widget">
 <pre>&lt;$view tiddler=&quot;Draft of 'GitHub-Links v2'&quot; format=&quot;htmlwikified&quot;/&gt;
 </pre>
+</div>
+<div created="20191024052251059" modified="20191024052643082" title="WikiSwitcher">
+<pre>AnotherWiki public</pre>
 </div>
 
 </div>
