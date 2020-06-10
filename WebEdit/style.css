@@ -1,0 +1,205 @@
+* {
+    font-family: "Open Sans", sans-serif;
+}
+body {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100vh; */
+    /* width: 100%; */
+    justify-content: baseline;
+    align-items: stretch; 
+    overscroll-behavior-y: contain;
+}
+.label {
+    margin-left: .3em;
+}
+#new_file {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.2em;
+    flex-shrink: 1;
+
+
+}
+
+.file, .folder, .file_header {    
+    display: flex;    
+    flex-direction: row;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    padding: 5px;
+    align-items: flex-end;
+    justify-content: stretch;
+}
+.file_info {
+    flex-basis: 30%;
+    flex: 0 1 30%
+    text-align: left;    
+}
+.file_header{
+    background-color: #ccc;
+}
+.file_icon {
+    flex-basis: 10%; 
+    flex: 0 1 10%;
+}
+.file:hover, .folder:hover {
+    background-color: #CDF;
+}
+.rootFolder {
+    color: #000;
+}
+/* .folder {
+}
+.file {
+} */
+#files_view {
+    margin-top: .3em;
+    border: 1px solid #ddd;    
+}
+.fa-file-alt, .fa-folder {    
+    color: #69A;
+    margin-bottom: .3em;
+    font-size: 150%;
+}
+
+#file_title {    
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;    
+    width: 90%;
+}
+#navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: baseline;
+    /* width: 100%;     */
+    background-color: #e0e4f0;
+}
+#brand {
+    align-self: flex-start;
+    font-size: 200%;
+    font-weight: bold;
+}
+#fixed {    
+    position: fixed; 
+    top: 0;
+}
+#logout {
+    align-self: flex-end;
+    /* flex-basis: 3%;     */
+    /* margin-right: 1%; */
+}
+#login {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.hard_right {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    flex-basis: 40%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#wc {        
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.info {
+    margin: 1em;
+    width: 40em;
+}
+.header {
+    margin-bottom: 0.2em;
+}
+#editor {
+    display: flex;
+    /* width: 100%; */
+    height: 100vh;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: stretch;
+}
+#editor-pane {
+    height: 100em;
+    border: 1px solid #ccc;
+    /* width: 100%; */
+    flex: 1;
+}
+
+#edit_filename {
+    border: 1px solid #ccc;
+    font-size: 120%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    width: 20em;
+}
+
+#filepicker {    
+    display: flex;
+    flex-direction: column;        
+    /* flex-basis: 50%; */
+    flex: 0 1 auto;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+#filesHolder, #foldersHolder, #files_header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.button_se, .breadcrumb {
+    padding: 8px;
+    color: #fff;
+    background-color: #27B;
+    background-image: linear-gradient(to bottom right, #278, #38B);
+    border: none;
+}
+.button_se:hover, .breadcrumb:hover {
+    color: #000;
+}
+.breadcrumb  {
+    margin-right: 5px;
+}
+
+.button_inactive {    
+    padding: 8px;
+    color: #fff;
+    background-color: #aaa;
+    border: none;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+
+a {
+    text-decoration: none;
+    color: #27B;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+* {
+    font-size: 16px;
+}
