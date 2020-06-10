@@ -1,7 +1,7 @@
 var GoogleAuth;
 var SCOPE = ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/drive.file'];
 var SCOPE = 'https://www.googleapis.com/auth/drive';
-var CLIENT_ID = '813919428941-hbams7vd9hr8uhrai1hqk3ufkvsuhgi8.apps.googleusercontent.com';
+var CLIENT_ID = 'AIzaSyDrN2DgVDNvcYldozpEcQzuMD0-DDTt05Q.apps.googleusercontent.com';
 
 function handleClientLoad() {
     gapi.load('client:auth2', initClient);
